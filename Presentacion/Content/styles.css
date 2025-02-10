@@ -47,8 +47,8 @@
     border-radius: 20px;
 }
 
-    .btn:hover {
-        text-decoration: none;
-        background-color: #576CA8;
-        opacity: 0.8;
-    }
+.btn:hover {
+     text-decoration: none;
+     background-color: #576CA8;
+     opacity: 0.8;
+}

@@ -22,10 +22,13 @@
                 <asp:TextBox ID="txtPass" runat="server" CssClass="form-control item" placeholder="Contraseña"></asp:TextBox>
             </div>
             <div class="form-group">
-                <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" CssClass="btn btn-primary" />
+                <asp:Button ID="btnLogin" runat="server" Text="Iniciar Sesión" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
             </div>
             <div class="txt">
                 <span>¿Olvidaste tu <strong>usuario/contraseña</strong>?</span>
+            </div>
+            <div class="txt">
+                <asp:Label ID="lblError" runat="server" Text="" CssClass="alert alert-danger"></asp:Label>
             </div>
         </form>
     </div>
