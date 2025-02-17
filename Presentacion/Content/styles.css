@@ -52,3 +52,77 @@
      background-color: #576CA8;
      opacity: 0.8;
 }
+
+.title {
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.show-data {
+    background-color: white;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.table {
+    max-width: 1000px;
+    align-self: center;
+    margin: auto;
+    border: none;
+}
+.navbar {
+    background-color: white;
+}
+
+.title h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.show-data .item {
+    background-color: blue;
+    max-width: 400px;
+}
+
+.show-data .row{
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.placeholder-cursiva::placeholder {
+    font-style: italic;
+}
+
+.btn-add {
+    display: block;
+    width: 200px;
+    border: none;
+    justify-self: left;
+    background-color: #274690;
+    border-radius: 20px;
+}
+
+td a {
+    color: #274690;
+}
+
+.table tbody tr {
+    border-bottom: #454851;
+}
+.table thead th {
+    border-bottom: #454851;
+}
+
+.btn-logout {
+    display: block;
+    width: 100px;
+    border: none;
+    justify-self: right;
+    background-color: #274690;
+    border-radius: 20px;
+    font-size: 10px;
+}

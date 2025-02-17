@@ -13,7 +13,7 @@
     <div class="login-form">
         <form runat="server">
             <div class="form-name">
-                <asp:Label ID="txtPrincipal" runat="server" Text="<strong>Inicio de Sesión</strong>"></asp:Label>
+                &nbsp;<asp:Label ID="txtPrincipal" runat="server" Text="<strong>Inicio de Sesión</strong>"></asp:Label>
             </div>
             <div class="form-group">
                 <asp:TextBox ID="txtUser" runat="server" CssClass="form-control item" placeholder="Usuario"></asp:TextBox>
