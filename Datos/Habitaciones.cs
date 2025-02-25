@@ -74,7 +74,7 @@ namespace Datos
             using (SqlConnection con = new SqlConnection(conexionString))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Habitaciones", con))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Habitaciones WHERE idHabitaciones = @ID", con))
                 { 
                     cmd.Parameters.AddWithValue("@ID",ID);
                     int filasAfectadas = cmd.ExecuteNonQuery();

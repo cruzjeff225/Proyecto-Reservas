@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,16 @@ namespace Negocios
                 return "Usuario o contraseña incorrectos. Intentalo nuevamente";
             }
         }
+
+        public DataTable obtenerUsuarios()
+        {
+            return dataUsuarios.obtenerUsuarios();
+        }
+
+        public int obtenerIdUsuario(string Usuario)
+        {
+            return dataUsuarios.obtenerIdUsuario(Usuario);
+        }
+
     }
 }

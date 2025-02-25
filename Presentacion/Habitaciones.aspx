@@ -14,17 +14,17 @@
     <form id="form1" runat="server">
         <nav class="navbar">
             <a class="navbar-brand">Reservas</a>
-                    <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-primary btn-logout" Text="Cerrar Sesión" OnClick="btnLogout_Click" />
+            <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-primary btn-logout" Text="Cerrar Sesión" OnClick="btnLogout_Click" />
         </nav>
         <div class="show-data">
             <div class="title">
-                <h3 class="mb-4">Lista de Habitaciones</h3>
+                <h3 class="mb-4">Lista de Habitaciones </h3>
             </div>
             <asp:GridView ID="gvHabitaciones" runat="server" AutoGenerateColumns="false" CssClass="table table-hover"
                 DataKeyNames="idHabitaciones" OnRowEditing="gvHabitaciones_RowEditing"
                 OnRowUpdating="gvHabitaciones_RowUpdating"
                 OnRowCancelingEdit="gvHabitaciones_RowCancelingEdit"
-                OnRowDeleting="gvHabitaciones_RowDeleting">
+                OnRowDeleting="gvHabitaciones_RowDeleting" OnSelectedIndexChanged="gvHabitaciones_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="idHabitaciones" HeaderText="ID" />
                     <asp:BoundField DataField="Numero" HeaderText="Numero" />
@@ -63,7 +63,8 @@
             <div class="mb-3 row">
                 <label for="txtIdUsuario" class="col-sm-2 col-form-label">ID Usuario:</label>
                 <div class="col-sm-6">
-                    <asp:TextBox ID="txtIdUsuario" runat="server" CssClass="form-control placeholder-cursiva" placeholder="ID Usuario"></asp:TextBox>
+                    <asp:DropDownList ID="ddlUsuarios" runat="server" CssClass="form-select">
+                    </asp:DropDownList>
                 </div>
             </div>
 

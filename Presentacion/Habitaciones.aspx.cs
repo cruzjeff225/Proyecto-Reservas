@@ -11,6 +11,7 @@ namespace Presentacion
     public partial class Habitaciones : System.Web.UI.Page
     {
         negocioHabitaciones NegocioHabitaciones = new negocioHabitaciones();
+        negocioUsuario NegocioUsuarios = new negocioUsuario();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
@@ -20,7 +21,16 @@ namespace Presentacion
             if (!IsPostBack)
             {
                 CargarHabitaciones();
+                CargarUsuarios();
             }
+        }
+
+        protected void CargarUsuarios()
+        {
+            ddlUsuarios.DataSource = NegocioUsuarios.obtenerUsuarios();
+            ddlUsuarios.DataTextField = "Usuario";
+            ddlUsuarios.DataValueField = "idUsuario";
+            ddlUsuarios.DataBind();
         }
 
         protected void CargarHabitaciones()
@@ -34,7 +44,7 @@ namespace Presentacion
             int Numero = Convert.ToInt32(txtNumero.Text);
             string Descripcion = txtDescripcion.Text;
             int Huespedes = Convert.ToInt32(txtHuespedes.Text);
-            int idUsuario = Convert.ToInt32(txtIdUsuario.Text);
+            int idUsuario = int.Parse(ddlUsuarios.SelectedValue);
 
             bool exito = NegocioHabitaciones.agregarHabitaciones(Numero, Descripcion, Huespedes, idUsuario);
             if (exito)
@@ -89,7 +99,12 @@ namespace Presentacion
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            Response.Redirect("Clientes.aspx");
+        }
+
+        protected void gvHabitaciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

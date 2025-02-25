@@ -26,8 +26,18 @@ namespace Presentacion
 
             if(resultado == "Ok") 
             {
-                Session["Usuario"] = Usuario;
-                Response.Redirect("Habitaciones.aspx");
+                int idUsuario = NegocioUsuario.obtenerIdUsuario(Usuario);
+                if (idUsuario > 0)
+                {
+                    Session["Usuario"] = Usuario;
+                    Session["idUsuario"] = idUsuario;
+                    Response.Redirect("Habitaciones.aspx");
+                }
+                else 
+                {
+                    lblError.Text = "No se pudo obtener el ID de Usuario";
+                    lblError.Visible = true;
+                }
             }
             else 
             {
