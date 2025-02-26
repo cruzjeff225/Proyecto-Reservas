@@ -12,10 +12,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar">
-            <a class="navbar-brand">Reservas</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Reservas</a>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Clientes.aspx">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reservas.aspx">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registroReserva.aspx">Registro Reservas</a>
+                    </li>
+                </ul>
+            </div>
+
             <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-primary btn-logout" Text="Cerrar Sesión" OnClick="btnLogout_Click" />
         </nav>
+
         <div class="show-data">
             <div class="title">
                 <h3 class="mb-4">Lista de Habitaciones </h3>

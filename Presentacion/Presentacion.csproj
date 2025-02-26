@@ -74,6 +74,7 @@
     <Content Include="Habitaciones.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Principal.aspx" />
+    <Content Include="Reservas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +110,13 @@
       <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservas.aspx.cs">
+      <DependentUpon>Reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reservas.aspx.designer.cs">
+      <DependentUpon>Reservas.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

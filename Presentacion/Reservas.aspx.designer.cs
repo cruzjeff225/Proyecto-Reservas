@@ -11,7 +11,7 @@ namespace Presentacion
 {
 
 
-    public partial class Clientes
+    public partial class Reservas
     {
 
         /// <summary>
@@ -33,58 +33,76 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// Control gvClientes.
+        /// Control txtIdCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvClientes;
+        protected global::System.Web.UI.WebControls.TextBox txtIdCliente;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control ddlHabitaciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.DropDownList ddlHabitaciones;
 
         /// <summary>
-        /// Control txtDUI.
+        /// Control txtPrecioInicial.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDUI;
+        protected global::System.Web.UI.WebControls.TextBox txtPrecioInicial;
 
         /// <summary>
-        /// Control txtTelefono.
+        /// Control ddlDescuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDescuento;
 
         /// <summary>
-        /// Control txtCorreo.
+        /// Control txtCheckin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
+        protected global::System.Web.UI.WebControls.TextBox txtCheckin;
 
         /// <summary>
-        /// Control txtDepartamento.
+        /// Control txtCheckout.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartamento;
+        protected global::System.Web.UI.WebControls.TextBox txtCheckout;
+
+        /// <summary>
+        /// Control txtDiasTotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDiasTotal;
+
+        /// <summary>
+        /// Control txtPrecioFinal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrecioFinal;
 
         /// <summary>
         /// Control btnAgregar.

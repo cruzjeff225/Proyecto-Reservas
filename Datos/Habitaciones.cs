@@ -69,14 +69,14 @@ namespace Datos
             }
         }
 
-        public bool eliminarHabitaciones(int ID) 
+        public bool eliminarHabitaciones(int idHabitaciones) 
         {
             using (SqlConnection con = new SqlConnection(conexionString))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Habitaciones WHERE idHabitaciones = @ID", con))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Habitaciones WHERE idHabitaciones = @idHabitaciones", con))
                 { 
-                    cmd.Parameters.AddWithValue("@ID",ID);
+                    cmd.Parameters.AddWithValue("@idHabitaciones",idHabitaciones);
                     int filasAfectadas = cmd.ExecuteNonQuery();
                     return filasAfectadas > 0;
                 }

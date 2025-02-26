@@ -99,10 +99,15 @@ namespace Presentacion
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Clientes.aspx");
+            Response.Redirect("index.aspx");
         }
 
         protected void gvHabitaciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnLogout_Click1(object sender, EventArgs e)
         {
 
         }

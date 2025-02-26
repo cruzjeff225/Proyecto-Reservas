@@ -91,5 +91,10 @@ namespace Presentacion
                 cargarClientes();
             }
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }
