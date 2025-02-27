@@ -48,9 +48,9 @@ namespace Negocios
             return reservasN.agregarReserva(idReserva, idCliente, idHabitacion, Precio, Descuento, Checkin, Checkout, fechaRegistro, idUsuario);
         }
 
-        public bool editarReserva(int idReserva, int idHabitacion, decimal Precio, decimal Descuento, DateTime Checkin, DateTime Checkout)
+        public bool editarReserva(int idReserva, int idCliente, int idHabitacion, decimal Precio, decimal Descuento, DateTime Checkin, DateTime Checkout)
         {
-            return reservasN.editarReserva(idReserva, idHabitacion, Precio, Descuento, Checkin, Checkout);
+            return reservasN.editarReserva(idReserva, idCliente, idHabitacion, Precio, Descuento, Checkin, Checkout);
         }
 
         public bool eliminarReserva(int idReserva)

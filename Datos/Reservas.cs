@@ -73,7 +73,7 @@ namespace Datos
             }
         }
 
-        public bool editarReserva(int idReserva, int idHabitacion, decimal Precio, decimal Descuento, DateTime Checkin, DateTime Checkout)
+        public bool editarReserva(int idReserva, int idCliente, int idHabitacion, decimal Precio, decimal Descuento, DateTime Checkin, DateTime Checkout)
         {
 
             using (SqlConnection con = new SqlConnection(conexionString))
@@ -82,6 +82,7 @@ namespace Datos
                 using (SqlCommand cmd = new SqlCommand("UPDATE Reserva SET idHabitacion = @idHabitacion, Precio = @Precio, Descuento = @Descuento, Checkin = @Checkin, Checkout = @Checkout WHERE idReserva = @idReserva", con))
                 {
                     cmd.Parameters.AddWithValue("@idReserva", idReserva);
+                    cmd.Parameters.AddWithValue("@idHabitacion", idHabitacion);
                     cmd.Parameters.AddWithValue("@Precio", Precio);
                     cmd.Parameters.AddWithValue("@Descuento", Descuento);
                     cmd.Parameters.AddWithValue("@Checkin", Checkin);
